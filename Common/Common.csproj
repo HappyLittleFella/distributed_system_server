@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SharedMemory">
+      <HintPath>..\SharedMemory-master\bin\Debug\net46\SharedMemory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
