@@ -10,7 +10,6 @@ namespace Common
 		public const string DEFAULT_NAME = "shared_memory_storage";
 		public const long DEFAULT_SIZE = 128 * 1024 * 1024;
 
-		private int index = 0;
 		private uint elementSize = 0;
 
 		private object appendLock = new object ();

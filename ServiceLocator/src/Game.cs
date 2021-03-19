@@ -24,7 +24,7 @@ namespace ServiceLocator
 
 		/* Public properties */
 		public GameStatus status;
-		public short port;
+		public ushort port;
 		public fixed char ip[MAX_IP_LENGTH];
 		public fixed char name[MAX_NAME_LENGTH];
 		
@@ -34,7 +34,7 @@ namespace ServiceLocator
 			long created,
 			long started,
 			GameStatus status,
-			short port,
+			ushort port,
 			string ip,
 			string name
 		) {

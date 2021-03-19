@@ -11,7 +11,7 @@ namespace ServiceLocator
 
 		public ulong id { get; set; }
 
-		public short port { get; set; }
+		public ushort port { get; set; }
 
 		public string name { get; set; }
 
@@ -20,7 +20,7 @@ namespace ServiceLocator
 		}
 
 		public GameData (
-			short port,
+			ushort port,
 			string name
 		) {
 			this.port = port;

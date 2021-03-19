@@ -112,7 +112,11 @@ namespace ServiceLocator.Controllers
 					(err ??= new Errors ()).addError (e);
 				}
 			}
-			if (game.port <= 0) {
+			if (game.id != 0) {
+				Error e = new Error("Id is server generated.");
+				(err ??= new Errors ()).addError (e);
+			}
+			if (game.port == 0) {
 				Error e = new Error("Invalid game port.");
 				(err ??= new Errors ()).addError (e);
 			}
@@ -129,6 +133,10 @@ namespace ServiceLocator.Controllers
 				Error e = new Error ("Invalid game id.");
 				(err ??= new Errors ()).addError (e);
 			}
+			if (game.port == 0) {
+				Error e = new Error ("Invalid port.");
+				(err ??= new Errors ()).addError (e);
+			}
 			return err;
 		}
 
@@ -136,6 +144,10 @@ namespace ServiceLocator.Controllers
 			Errors? err = null;
 			if (game.id == 0) {
 				Error e = new Error ("Invalid game id.");
+				(err ??= new Errors ()).addError (e);
+			}
+			if (game.port == 0) {
+				Error e = new Error ("Invalid port.");
 				(err ??= new Errors ()).addError (e);
 			}
 			return err;
